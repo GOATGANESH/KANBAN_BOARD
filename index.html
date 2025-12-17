@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <div class="modal">
+      <div class="overlay"></div>
+      <div class="center">
+        <input type="text" name="task-name" id="task-name" placeholder="task title">
+        <textarea name="task-desc" id="task-description" placeholder="task description" cols="6" rows="6"></textarea>
+        <div class="modal-controls">
+          <button id="add-task">Add Task</button>
+          <button id="cancel-task">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+    <main>
+      <nav class="navbar">
+        <div class="left">
+          <h3 id="kanban-title">KANBAN BOARD</h3>
+        </div>
+        <div class="right">
+          <button id="toggle-modal" class="btn">Add New Task</button>
+        </div>
+      </nav>
+      <section id="task-container">
+        <div class="task-column todo-container">
+          <div class="heading">
+            <div class="left">ToDo</div>
+            <div class="right" id="t-count">count</div>
+          </div>
+          <div class="task-list t-task-list container">
+            <div draggable="true" class="task">
+              <div class="task-title"><h2>heading goes here</h2></div>
+              <div class="task-desc"><p>Descriptions goes here</p></div>
+              <button id="delete-task" class="btn">Delete</button>
+            </div>
+            <!-- <div draggable="true" class="task">
+              <div class="task-title"><h2>heading goes here</h2></div>
+              <div class="task-desc"><p>Descriptions goes here</p></div>
+              <button id="delete-task" class="btn">Delete</button>
+            </div> -->
+          
+           
+          </div>
+        </div>
+        <div class="task-column in-progress-task-container">
+          <div class="heading">
+            <div class="left">In-progress</div>
+            <div class="right" id="i-count">count</div>
+          </div>
+          <div class="task-list i-task-list"></div>
+        </div>
+        <div class="task-column completed-task-container">
+          <div class="heading">
+            <div class="left">Completed</div>
+            <div class="right" id="c-count">count</div>
+          </div>
+          <div class="task-list c-task-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
